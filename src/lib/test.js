@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom/client";
 import SimpleDropdown from './SimpleDropdown'; // Assurez-vous que le chemin est correct
 
 //set des params de tests
@@ -31,20 +31,38 @@ let listeOptionsBis = {
     "LegalBis": "LegalBis",
 };
 let defaultValueBis = "HumanBis";
+let listeAttributsSelectTris = {
+    name: "DepartmentTris",
+    id: "DepartmentTris",
+    required: true,
+    onchange: "alert('changed!');",
+};
+let listeOptionsTris = {
+    "SalesTris": "SalesTris",
+    "MarketingTris": "MarketingTris",
+    "EngineeringTris": "EngineeringTris",
+    "HumanTris": "Human ResourcesTris",
+    "LegalTris": "LegalTris",
+};
+let defaultValueTris = "HumanTris";
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("app"));
+root.render(
     <>
         <SimpleDropdown
-            uniqueKey="SimpleDropdown"
             listeAttributsSelect={listeAttributsSelect}
             listeOptions={listeOptions}
             defaultValue={defaultValue}
         />
         <SimpleDropdown
-            uniqueKey="SimpleDropdownBis"
             listeAttributsSelect={listeAttributsSelectBis}
             listeOptions={listeOptionsBis}
             defaultValue={defaultValueBis}
         />
+        <SimpleDropdown
+            listeAttributsSelect={listeAttributsSelectTris}
+            listeOptions={listeOptionsTris}
+            defaultValue={defaultValueTris}
+        />
     </>
-    , document.getElementById('app'));
+);

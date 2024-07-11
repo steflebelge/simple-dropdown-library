@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import "./SimpleDropdown.scss";
+import { v4 } from 'uuid';
 
-function SimpleDropdown({uniqueKey, listeAttributsSelect, listeOptions, defaultValue}) {
+function SimpleDropdown({listeAttributsSelect, listeOptions, defaultValue}) {
     const [error, seterror] = useState(null);
+    const unikIdentifier = v4();
 
     useEffect(() => {
         //verification params
@@ -22,15 +24,15 @@ function SimpleDropdown({uniqueKey, listeAttributsSelect, listeOptions, defaultV
         listeOptions = Object.fromEntries(entries);
 
         //recuperation du bon element de selection
-        let select = document.querySelector('select[uniqueKey="' + uniqueKey + '"]');
+        let select = document.getElementById(unikIdentifier);
+        if(!select)
+            return;
 
         //set des attributs du select
         Object.keys(listeAttributsSelect).forEach(function (keyTmp) {
-            // if (!listeAttributsSelect[keyTmp])
-            //     return seterror(`L'attribut ${keyTmp} du paramètre 'listeAttributsSelect' semble poser probleme.`);
-
             select.setAttribute(keyTmp, listeAttributsSelect[keyTmp]);
         });
+
         //set des options du select
         Object.keys(listeOptions).forEach(function (keyTmp) {
             if (!listeOptions[keyTmp])
@@ -50,7 +52,7 @@ function SimpleDropdown({uniqueKey, listeAttributsSelect, listeOptions, defaultV
         error ? (
             <p>{error}</p>
         ) : (
-            <select uniqueKey={uniqueKey}></select>
+            <select id={unikIdentifier}/>
         )
     );
 }

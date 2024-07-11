@@ -1,7 +1,7 @@
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
-var _reactDom = _interopRequireDefault(require("react-dom"));
+var _client = _interopRequireDefault(require("react-dom/client"));
 var _SimpleDropdown = _interopRequireDefault(require("./SimpleDropdown"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 // Assurez-vous que le chemin est correct
@@ -35,14 +35,31 @@ let listeOptionsBis = {
   "LegalBis": "LegalBis"
 };
 let defaultValueBis = "HumanBis";
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_SimpleDropdown.default, {
-  uniqueKey: "SimpleDropdown",
+let listeAttributsSelectTris = {
+  name: "DepartmentTris",
+  id: "DepartmentTris",
+  required: true,
+  onchange: "alert('changed!');"
+};
+let listeOptionsTris = {
+  "SalesTris": "SalesTris",
+  "MarketingTris": "MarketingTris",
+  "EngineeringTris": "EngineeringTris",
+  "HumanTris": "Human ResourcesTris",
+  "LegalTris": "LegalTris"
+};
+let defaultValueTris = "HumanTris";
+const root = _client.default.createRoot(document.getElementById("app"));
+root.render( /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_SimpleDropdown.default, {
   listeAttributsSelect: listeAttributsSelect,
   listeOptions: listeOptions,
   defaultValue: defaultValue
 }), /*#__PURE__*/_react.default.createElement(_SimpleDropdown.default, {
-  uniqueKey: "SimpleDropdownBis",
   listeAttributsSelect: listeAttributsSelectBis,
   listeOptions: listeOptionsBis,
   defaultValue: defaultValueBis
-})), document.getElementById('app'));
+}), /*#__PURE__*/_react.default.createElement(_SimpleDropdown.default, {
+  listeAttributsSelect: listeAttributsSelectTris,
+  listeOptions: listeOptionsTris,
+  defaultValue: defaultValueTris
+})));

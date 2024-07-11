@@ -24,14 +24,17 @@ yarn-error.log*
 
 
 #phpStorm
-.idea
+#.idea
 #cache
-.cache
+#.cache
 #config
-config
+#config
 #public
-public
+#public
 #scripts
-scripts
+#scripts
 #test
-test
+#test
+
+#suppr dossier + publish
+#decommente dossiers + publish
