@@ -35,6 +35,5 @@ public
 scripts
 #test
 test
-
-#suppr dossier + publish
-#decommente dossiers + publish
+#fichier de test
+src/lib/test.js
