@@ -9,14 +9,14 @@ function SimpleDropdown({listeAttributsSelect, listeOptions, defaultValue}) {
     useEffect(() => {
         //verification params
         if (!listeAttributsSelect || !listeOptions || !defaultValue)
-            return seterror('Parametre manquant');
+            return seterror('Missing parameter');
         if (typeof listeAttributsSelect !== "object"
             || typeof listeOptions !== "object"
             || typeof defaultValue !== "string")
-            return seterror('Mauvais type de parametre');
+            return seterror('Bad parameter type');
         if (!listeAttributsSelect['name']
             || !listeOptions[defaultValue])
-            return seterror('Parametre invalide');
+            return seterror('Invalid parameter');
 
         //tri des options par ordre croissant
         const entries = Object.entries(listeOptions);
@@ -36,7 +36,7 @@ function SimpleDropdown({listeAttributsSelect, listeOptions, defaultValue}) {
         //set des options du select
         Object.keys(listeOptions).forEach(function (keyTmp) {
             if (!listeOptions[keyTmp])
-                return seterror(`L'attribut ${keyTmp} du paramètre 'listeOptions' semble poser probleme.`);
+                return seterror(`The ${keyTmp} attribut of parameter 'listeOptions' seems to be wrong.`);
 
             //Ajout si pas deja présent
             if(!select.querySelector(`option[value="${keyTmp}"]`)) {

@@ -1,6 +1,6 @@
 {
   "name": "simple-dropdown-library",
-  "version": "0.6.8",
+  "version": "0.7.0",
   "main": "dist/SimpleDropdown.js",
   "private": false,
   "dependencies": {
@@ -132,6 +132,10 @@
       "jest-watch-typeahead/testname"
     ],
     "resetMocks": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steflebelge/simple-dropdown-library.git"
   },
   "devDependencies": {
     "@babel/cli": "^7.24.7",

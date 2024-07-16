@@ -19,9 +19,9 @@ function SimpleDropdown(_ref) {
   const unikIdentifier = (0, _uuid.v4)();
   (0, _react.useEffect)(() => {
     //verification params
-    if (!listeAttributsSelect || !listeOptions || !defaultValue) return seterror('Parametre manquant');
-    if (typeof listeAttributsSelect !== "object" || typeof listeOptions !== "object" || typeof defaultValue !== "string") return seterror('Mauvais type de parametre');
-    if (!listeAttributsSelect['name'] || !listeOptions[defaultValue]) return seterror('Parametre invalide');
+    if (!listeAttributsSelect || !listeOptions || !defaultValue) return seterror('Missing parameter');
+    if (typeof listeAttributsSelect !== "object" || typeof listeOptions !== "object" || typeof defaultValue !== "string") return seterror('Bad parameter type');
+    if (!listeAttributsSelect['name'] || !listeOptions[defaultValue]) return seterror('Invalid parameter');
 
     //tri des options par ordre croissant
     const entries = Object.entries(listeOptions);
@@ -39,7 +39,7 @@ function SimpleDropdown(_ref) {
 
     //set des options du select
     Object.keys(listeOptions).forEach(function (keyTmp) {
-      if (!listeOptions[keyTmp]) return seterror("L'attribut ".concat(keyTmp, " du param\xE8tre 'listeOptions' semble poser probleme."));
+      if (!listeOptions[keyTmp]) return seterror("The ".concat(keyTmp, " attribut of parameter 'listeOptions' seems to be wrong."));
 
       //Ajout si pas deja présent
       if (!select.querySelector("option[value=\"".concat(keyTmp, "\"]"))) {
