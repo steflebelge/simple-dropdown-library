@@ -73,9 +73,9 @@ In case of a missing parameter, a matching message will be display, it can be :
 
 The "listeOptions" will be order by name.
 
-### Dependencies
+## Dependencies
 
 This library need the 'uuid' package version 10.
 
-#### Screenshot
+## Screenshot
 ![Screenshot](src/assets/screenshot1.png)

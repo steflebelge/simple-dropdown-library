@@ -30088,9 +30088,9 @@ function SimpleDropdown({
   const unikIdentifier = (0, _uuid.v4)();
   (0, _react.useEffect)(() => {
     //verification params
-    if (!listeAttributsSelect || !listeOptions || !defaultValue) return seterror('Parametre manquant');
-    if (typeof listeAttributsSelect !== "object" || typeof listeOptions !== "object" || typeof defaultValue !== "string") return seterror('Mauvais type de parametre');
-    if (!listeAttributsSelect['name'] || !listeOptions[defaultValue]) return seterror('Parametre invalide');
+    if (!listeAttributsSelect || !listeOptions || !defaultValue) return seterror('Missing parameter');
+    if (typeof listeAttributsSelect !== "object" || typeof listeOptions !== "object" || typeof defaultValue !== "string") return seterror('Bad parameter type');
+    if (!listeAttributsSelect['name'] || !listeOptions[defaultValue]) return seterror('Invalid parameter');
 
     //tri des options par ordre croissant
     const entries = Object.entries(listeOptions);
@@ -30108,7 +30108,7 @@ function SimpleDropdown({
 
     //set des options du select
     Object.keys(listeOptions).forEach(function (keyTmp) {
-      if (!listeOptions[keyTmp]) return seterror(`L'attribut ${keyTmp} du paramètre 'listeOptions' semble poser probleme.`);
+      if (!listeOptions[keyTmp]) return seterror(`The ${keyTmp} attribut of parameter 'listeOptions' seems to be wrong.`);
 
       //Ajout si pas deja présent
       if (!select.querySelector(`option[value="${keyTmp}"]`)) {
@@ -30214,7 +30214,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49723" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50099" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -1,6 +1,6 @@
 {
   "name": "simple-dropdown-library",
-  "version": "0.7.0",
+  "version": "0.7.2",
   "main": "dist/SimpleDropdown.js",
   "private": false,
   "dependencies": {

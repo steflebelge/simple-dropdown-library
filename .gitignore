@@ -35,5 +35,3 @@ public
 scripts
 #test
 test
-#fichier de test
-src/lib/test.js

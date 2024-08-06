@@ -1,1 +1,1 @@
-{"version":3,"sources":["..\\src\\lib\\SimpleDropdown.scss"],"names":[],"mappings":"AAAA;EACE","file":"test.163817b7.css","sourceRoot":"..\\test","sourcesContent":["p{\r\n  color: green;\r\n}\r\n"]}
+{"version":3,"sources":["..\\src\\lib\\SimpleDropdown.scss"],"names":[],"mappings":"AAAA;EACE","file":"test.163817b7.css","sourceRoot":"..\\test","sourcesContent":["p{\r\n  color: red;\r\n}\r\n"]}
